@@ -39,11 +39,13 @@
           </svg>
         </button>
         <span class="start-caption">开始游戏</span>
+        <button id="recordsBtn" class="text-btn" type="button">游戏记录</button>
       </div>
     </section>
 
     <section id="gameView" class="view game-view" aria-label="游戏进行中" hidden>
       <div class="game-top">
+        <button id="hintBtn" class="hint-btn" type="button" aria-label="提示下一步">提示</button>
         <span id="timer" class="timer">00:00:00</span>
         <button id="pauseBtn" class="icon-btn" type="button" aria-label="暂停游戏">
           <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">
@@ -118,6 +120,19 @@
         <button id="closeSuccessBtn" class="btn btn--ghost" type="button">关闭</button>
         <button id="playAgainBtn" class="btn btn--solid" type="button">再玩一次</button>
       </div>
+    </div>
+  </div>
+
+  <div id="recordsModal" class="scrim scrim--sheet" hidden>
+    <div class="sheet sheet--records" role="dialog" aria-modal="true" aria-labelledby="recordsTitle">
+      <div class="sheet-head">
+        <h2 id="recordsTitle" class="sheet-title">游戏记录</h2>
+        <button id="clearRecordsBtn" class="text-btn text-btn--danger" type="button">清空</button>
+      </div>
+      <div id="bestGrid" class="best-grid"></div>
+      <p id="recordsEmpty" class="records-empty" hidden>还没有通关记录，完成一局试试。</p>
+      <ol id="recordsList" class="records-list"></ol>
+      <button id="closeRecordsBtn" class="btn btn--ghost sheet-close" type="button">关闭</button>
     </div>
   </div>
 
